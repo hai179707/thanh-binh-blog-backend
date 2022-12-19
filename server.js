@@ -46,7 +46,10 @@ app.use('/api', messageRouter)
 app.use('/api', totalRouter)
 
 connect("mongodb+srv://thanhhai108:Mcgeesp1@cluster0.hhghloz.mongodb.net/thanhbinhblog", (error) => {
-    if(error) throw error
+    if(error) {
+        console.log(error)
+        return
+    }
     console.log("Connect MongoDB successfully!")
 })
 
