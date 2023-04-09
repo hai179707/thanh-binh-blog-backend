@@ -45,7 +45,7 @@ app.use('/api', contactRouter)
 app.use('/api', messageRouter)
 app.use('/api', totalRouter)
 
-connect("mongodb+srv://thanhhai108:Mcgeesp1@cluster0.hhghloz.mongodb.net/thanhbinhblog", (error) => {
+connect(process.env.MONGODB_URL, (error) => {
     if(error) {
         console.log(error)
         return
